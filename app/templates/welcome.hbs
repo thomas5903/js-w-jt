@@ -1,0 +1,28 @@
+{{outlet}}
+
+<h3>Let's make that money</h3>
+
+<form>
+    <fieldset>  
+        <div class="margin-top-20 form-group">
+            <div class="col-md-6">
+                {{input value=percent key-up="filterByPercentChange" class="form-control" placeholder="Filter results by percent change"}}
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<div class="margin-top-40">
+    {{#each gainers as |gainer|}}
+        <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+            <div class="card-header"> 
+                <strong>{{gainer.symbol}}</strong>  {{gainer.companyName}}
+            </div>
+            <div class="card-body">
+                <p>Current price {{gainer.latestPrice}}</p>
+                <h4 class="success card-title">+{{gainer.changePercent}}%</h4>
+                <p class="card-text">Sector: {{gainer.sector}}</p>
+            </div>
+        </div>
+    {{/each}}
+</div>

@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'demp-app',
+    modulePrefix: 'demo-app',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
